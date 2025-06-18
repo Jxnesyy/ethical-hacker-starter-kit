@@ -325,3 +325,51 @@
 <script src="js/paywall.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ethical Hacker Starter Kit</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- MATRIX CANVAS -->
+  <canvas id="matrix"></canvas>
+
+  <!-- OPTIONAL VIDEO BACKGROUND (uncomment if you have hero.mp4) -->
+  <!--
+  <video id="hero-video" autoplay muted loop>
+    <source src="assets/hero.mp4" type="video/mp4" />
+  </video>
+  -->
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Ethical Hacker Starter Kit</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#tools">Tools Hub</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Ethical Hacker Starter Kit</h1>
+    <p>Pentest-ready in minutes. Automate scans, reports &amp; more.</p>
+    <button id="subscribe">Unlock Premium</button>
+  </section>
+
+  <script src="js/matrix-rain.js"></script>
+  <script>
+    // Stripe redirect on click:
+    document.getElementById('subscribe').addEventListener('click', () => {
+      // replace with your real Stripe Checkout link:
+      window.location.href = 'https://buy.stripe.com/test_XXXXXXXXXX';
+    });
+  </script>
+</body>
+</html>
