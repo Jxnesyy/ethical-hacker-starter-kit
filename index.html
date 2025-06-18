@@ -1,6 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ethical Hacker Starter Kit</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- VIDEO + MATRIX BACKDROP -->
+  <video id="hero-video" autoplay muted loop playsinline></video>
+  <canvas id="matrix"></canvas>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <span class="logo">EH-StarterKit</span>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container">
+      <h1>Ethical Hacker Starter Kit</h1>
+      <p>Pentest-ready in minutes. Automate scans, reports & more.</p>
+      <button id="unlock-btn" class="btn">Unlock Premium</button>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>What You Get</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Port & Vuln Scans</h3>
+          <p>Run Nmap & Nikto in one command.</p>
+        </div>
+        <div class="card">
+          <h3>Docker-ized</h3>
+          <p>Isolated, repeatable testing environment.</p>
+        </div>
+        <div class="card">
+          <h3>Auto Reports</h3>
+          <p>Generate PDF/Markdown client reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <div class="grid">
+        <div class="plan">
+          <h3>Basic</h3>
+          <p class="price">$49</p>
+          <ul>
+            <li>scripts/ only</li>
+            <li>Port & vuln shells</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_basic" class="btn">Subscribe</a>
+        </div>
+        <div class="plan featured">
+          <h3>Pro</h3>
+          <p class="price">$99</p>
+          <ul>
+            <li>+ templates/</li>
+            <li>Report automation</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_pro" class="btn">Subscribe</a>
+        </div>
+        <div class="plan">
+          <h3>Premium</h3>
+          <p class="price">$149</p>
+          <ul>
+            <li>+ bundled ZIP</li>
+            <li>Video guide</li>
+          </ul>
+          <a href="https://buy.stripe.com/test_premium" class="btn">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact">
+    <div class="container">
+      <p>Questions? <a href="mailto:help@ehstarterkit.com">help@ehstarterkit.com</a></p>
+      <p>&copy; 2025 Ethical Hacker Starter Kit</p>
+    </div>
+  </footer>
+
+  <!-- PAYWALL OVERLAY -->
+  <div id="paywall" class="hidden">
+    <div class="paywall-box">
+      <h2>Premium Content</h2>
+      <p>Ready to supercharge your pentests? Choose a plan above to unlock.</p>
+      <button id="cancel-btn" class="btn">Close</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/matrix-rain.js"></script>
+  <script src="js/paywall.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Ethical Hacker Starter Kit</title>
