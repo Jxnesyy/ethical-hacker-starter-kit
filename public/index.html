@@ -4,32 +4,136 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Ethical Hacker Starter Kit</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-  <header>
-    <h1>Ethical Hacker Starter Kit</h1>
-    <p>Your free intro—unlock the rest below.</p>
-  </header>
 
-  <section id="public">
-    <h2>Free Sample Content</h2>
-    <ul>
-      <li>✓ Basic port scan script</li>
-      <li>✓ Vulnerability checklist</li>
-      <li>✓ PDF report template</li>
-    </ul>
-    <button id="unlock">Unlock Premium</button>
-  </section>
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ethical Hacker Starter Kit</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Tools Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="#premium">Premium</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section id="premium">
-    <h2>🔒 Premium Content</h2>
-    <p>• Full Dockerfile for containerized pentesting</p>
-    <p>• Automated Nmap & Nikto pipelines</p>
-    <p>• In-depth PDF report automation (Pandoc, LaTeX)</p>
-    <p>• And much more…</p>
-  </section>
+  <main class="pt-5 mt-5">
 
+    <!-- HERO -->
+    <section class="text-center my-5">
+      <h1 class="display-4">Ethical Hacker Starter Kit</h1>
+      <p class="lead">Your free intro—unlock the rest below.</p>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="container my-5">
+      <h2>Free Sample Content</h2>
+      <ul>
+        <li>✓ Basic port scan script</li>
+        <li>✓ Vulnerability checklist</li>
+        <li>✓ PDF report template</li>
+      </ul>
+    </section>
+
+    <!-- TOOLS HUB -->
+    <section id="tools" class="container my-5">
+      <h2>Tools Hub</h2>
+      <p>Everything included in this repo—copy & paste on Kali, or download directly:</p>
+      <ul>
+        <li>
+          <a href="scripts/port_scan.sh" download>port_scan.sh</a>  
+          — automated Nmap port scanner (run `bash port_scan.sh -t target.com`)
+        </li>
+        <li>
+          <a href="scripts/vuln_scan.sh" download>vuln_scan.sh</a>  
+          — wrapper for Nikto & other vuln scanners
+        </li>
+        <li>
+          <a href="templates/client_report.md" download>client_report.md</a>  
+          — pre-filled Markdown report template
+        </li>
+        <li>
+          <a href="tools.md" download>tools.md</a>  
+          — full list of recommended tools & usage notes
+        </li>
+      </ul>
+    </section>
+
+    <!-- PREMIUM PAYWALL -->
+    <section id="premium" class="container my-5 position-relative">
+      <div class="card p-4 bg-light">
+        <h2><span class="text-secondary">🔒</span> Premium Content</h2>
+        <ul>
+          <li>Full Dockerfile for containerized pentesting</li>
+          <li>Automated Nmap & Nikto pipelines</li>
+          <li>In-depth PDF report automation (Pandoc, LaTeX)</li>
+          <li>…and many more advanced goodies</li>
+        </ul>
+      </div>
+      <div 
+        class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center" 
+        style="top:0;left:0;background:rgba(255,255,255,0.85);">
+        <h3 class="text-secondary">Premium Access Required</h3>
+        <button id="unlock" class="btn btn-primary btn-lg">Unlock Now</button>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="container my-5 text-center">
+      <h2>Pricing Plans</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3>Free</h3>
+              <p>Basic scripts & templates</p>
+              <h4 class="text-success">$0</h4>
+              <button class="btn btn-outline-success" disabled>Included</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 border-primary">
+            <div class="card-body">
+              <h3>Premium</h3>
+              <p>All advanced tools & support</p>
+              <h4 class="text-primary">$49/mo</h4>
+              <a href="/checkout.html" class="btn btn-primary">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container my-5 text-center">
+      <h2>Contact & Support</h2>
+      <p>Questions? Email <a href="mailto:support@jhacks.com">support@jhacks.com</a></p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4">
+    <small>© 2025 Ethical Hacker Starter Kit. All rights reserved.</small>
+  </footer>
+
+  <!-- JS DEPENDENCIES -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
   <script src="js/paywall.js"></script>
 </body>
 </html>
