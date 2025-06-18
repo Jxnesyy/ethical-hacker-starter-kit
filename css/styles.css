@@ -1,3 +1,93 @@
+/* RESET + NO HORIZONTAL SCROLL */
+* { box-sizing: border-box; margin:0; padding:0; }
+html, body {
+  width:100%; height:100%;
+  overflow-x: hidden;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* MATRIX CANVAS */
+#matrix {
+  position: fixed;
+  top:0; left:0;
+  width:100vw; height:100vh;
+  z-index:-1;
+  background: #000;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top:0; left:0; right:0;
+  height:60px;
+  background: rgba(20,20,28,0.95);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 10;
+}
+.navbar .logo {
+  color: #0f0;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+.navbar .nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar .nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.navbar .nav-links a:hover {
+  color: #0f0;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding-top: 60px; /* push below navbar */
+}
+.hero h1 {
+  font-size: 3rem;
+  color: #0f0;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #0f0;
+}
+.hero p {
+  color: #0f0;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero button {
+  background: #0f0;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: filter 0.2s;
+}
+.hero button:hover {
+  filter: brightness(1.1);
+}
+
+/* RESPONSIVE TWEAKS */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.5rem; }
+  .navbar { padding: 0 1rem; }
+  .navbar .nav-links { display: none; /* hide on mobile */ }
+}
 /* prevent canvas/video from ever overflowing */
 html, body {
   margin: 0;
