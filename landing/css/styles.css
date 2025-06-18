@@ -1,0 +1,11 @@
+
+# CSS content
+css_dir = os.path.join(base_dir, 'css')
+os.makedirs(css_dir, exist_ok=True)
+css_content = """/* landing/css/styles.css */
+/* Custom styles */
+body { padding-top: 70px; }
+"""
+
+with open(os.path.join(css_dir, 'styles.css'), 'w') as f:
+    f.write(css_content)
